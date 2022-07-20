@@ -75,6 +75,6 @@ print(df.head())
 
 
 
-# Oluşturulan dataframe ile excel dosyası oluşturuldu
+# Oluşturulan dataframe ile excel dosyası oluşturuldu.
 
 df.to_excel("bkmdata.xlsx", encoding='utf-8', index=False)
