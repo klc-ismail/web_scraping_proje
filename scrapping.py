@@ -4,7 +4,7 @@ import pandas as pd
 
 
 
-# Hedeflenen linke erişilir
+# Hedeflenen linke erişildi
 
 link = "https://www.bkmkitap.com/korku-ve-gerilim-edebiyati"
 
@@ -16,10 +16,8 @@ soup = BeautifulSoup(href, "lxml")
 
 
 
-
-
 # Kitapların isimleri, yayınevleri, fiyatların indirim öncesi/sonrası ve indirim yüzdesi için ayrı birer 
-# liste oluşturulup aktarılır 
+# liste oluşturulup aktarıldı 
 
 
 kitaplist ,yayinevilist,yazarlist,fiyatlist,ilkfiyatlist,yuzdeindirim = [],[],[],[],[],[]
@@ -62,8 +60,7 @@ for i in indirim:
 
 
 
-
-# Pandas aracılığı ile veriler dataframe haline getirilir
+# Pandas aracılığı ile veriler dataframe haline getirildi
 
 data_list = list(zip(kitaplist,yayinevilist,yazarlist,fiyatlist,ilkfiyatlist,yuzdeindirim))
 df = pd.DataFrame(data_list,columns=["kitap_adi","yayin_evi","yazar_adi","fiyat","ilkfiyat","yüzdeindirim"])
@@ -78,9 +75,6 @@ print(df.head())
 
 
 
-
-
-
-# Oluşturulan dataframe excel dosyasına aktarılır
+# Oluşturulan dataframe ile excel dosyası oluşturuldu
 
 df.to_excel("bkmdata.xlsx", encoding='utf-8', index=False)
